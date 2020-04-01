@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "East US 2"
+        },
+        "aseName": {
+            "value": "asedhg01"
+        },
+        "subscriptionId": {
+            "value": "377a1702-a74f-4be4-bdef-8d8d2d6843b0"
+        },
+        "vnetName": {
+            "value": "vnet01"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "vnetId": {
+            "value": "/subscriptions/377a1702-a74f-4be4-bdef-8d8d2d6843b0/resourceGroups/Resource_Group_01/providers/Microsoft.Network/virtualNetworks/vnet01"
+        },
+        "VNetResourceGroupName": {
+            "value": "Resource_Group_01"
+        },
+        "vnetAddress": {
+            "value": "10.0.0.0/16"
+        },
+        "subnetAddress": {
+            "value": "10.0.0.0/24"
+        },
+        "subnetRouteTableName": {
+            "value": "asedhg01-Route-Table"
+        },
+        "subnetNSGName": {
+            "value": "asedhg01-NSG"
+        },
+        "ilbMode": {
+            "value": 0
+        },
+        "subnetId": {
+            "value": "/subscriptions/377a1702-a74f-4be4-bdef-8d8d2d6843b0/resourceGroups/Resource_Group_01/providers/Microsoft.Network/virtualNetworks/vnet01/subnets/default"
+        }
+    }
+}
