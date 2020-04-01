@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "networkInterfaceName": {
+            "value": "rmagent01281"
+        },
+        "networkSecurityGroupName": {
+            "value": "rmagent01-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/377a1702-a74f-4be4-bdef-8d8d2d6843b0/resourceGroups/Resource_Group_01/providers/Microsoft.Network/virtualNetworks/vnet01"
+        },
+        "publicIpAddressName": {
+            "value": "rmagent01-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "rmagent01"
+        },
+        "virtualMachineRG": {
+            "value": "Resource_Group_01"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B2ms"
+        },
+        "adminUsername": {
+            "value": "rmadmin"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "storageaccountdhg01"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/377a1702-a74f-4be4-bdef-8d8d2d6843b0/resourceGroups/Resource_Group_01/providers/Microsoft.Storage/storageAccounts/storageaccountdhg01"
+        }
+    }
+}
